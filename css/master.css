@@ -48,7 +48,7 @@ ul{
 @media (max-width:767px) {
     .sidebar{
         width: 62px;
-        padding: 10px;
+        padding: 10px !important;
     }
 }
 .sidebar > h3{
@@ -1217,6 +1217,11 @@ background-color: #f59f0b65;
 .plans{
     grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
 }
+@media (max-width:767px) {
+    .plans{
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
 .plans .plan.green .head-plan{
     background-color: var(--green-color);
 }
@@ -1251,6 +1256,13 @@ background-color: #f59f0b65;
     border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
+}
+@media (max-width:476px) {
+    .plans .plan ul li{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 7px;
+    }
 }
 .plans .plan ul li i:not(.info){
     margin-right: 15px;
